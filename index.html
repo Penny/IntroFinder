@@ -184,7 +184,7 @@ function processContent() {
         mutualConnections += connectionsArray.join(', ');
         if (displayedCount < result.relationToViewer.connections._total) {
           var remainingCount = result.relationToViewer.connections._total - displayedCount;
-          mutualConnections += 'and ' + remainingCount + ' others'
+          mutualConnections += ' and ' + remainingCount + ' others'
         }
       }
       tableRow += '<td>' + mutualConnections + '</td>';
