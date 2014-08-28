@@ -139,6 +139,11 @@ function processContent() {
     if (url.substring(0, 4) != 'http') {
       url = 'http://' + url;
     }
+    // The API doesn't like https urls either
+    if (url.substring(0, 5) == 'https') {
+      url = 'http' + url.substring(5, url.length);
+      console.log(url);
+    }
     var handleError = function(url) {
       return function(error) {
         console.log('Unable to load URL: ' + url);
